@@ -7,4 +7,6 @@ public class Main {
         s.peso = (float) 57.5;
         s.altezza = (float) 1.75;
     }
+
+
 }
