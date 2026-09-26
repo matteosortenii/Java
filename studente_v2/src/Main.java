@@ -40,6 +40,16 @@ public class Main {
                     studente2 = new Studente(nome2, cognome2, eta2, altezza2, peso2);
 
                     break;
+
+                case 2:
+                    int n;
+                    System.out.println("digitare 1 se si vuole calcolare la massa corporea dello studente 1 altrimenti digitare 2 se si vuole calcolare la massa corporea dello studente 2");
+                    n = input.nextInt();
+                    if (n == 1){
+                        System.out.println("lo studente è " + studente1.calcolaIndice());
+                    } else System.out.println("lo studente è " + studente2.calcolaIndice());
+
+                    break;
             }
         }
     }
