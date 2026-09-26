@@ -5,18 +5,23 @@ public class Studente {
     double altezza;
     double peso;
 
-    public Studente(String name, String surname, int age, double height, double wheight){
-        this.nome = " ";
-        this.cognome = " ";
+    public Studente(String nome, String cognome, int eta, double altezza, double peso) {
+        this.nome = nome;
+        this.cognome = cognome;
+        this.eta = eta;
+        this.altezza = altezza;
+        this.peso = peso;
+
         if (this.eta <= 5) {
-            eta = 5;
-        } else this.eta = 0;
-        if (this.altezza < 0.8){
-            altezza = 0.8;
+            this.eta = 5;
         }
-        if (this.peso < 20){
+        if (this.altezza < 0.8) {
+            this.altezza = 0.8;
+        }
+        if (this.peso < 20) {
             this.peso = 20;
         }
+    }
 
     public String calcolaIndice(){
         double BMI = peso / (altezza * altezza);
