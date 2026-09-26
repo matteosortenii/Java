@@ -50,6 +50,16 @@ public class Main {
                     } else System.out.println("lo studente è " + studente2.calcolaIndice());
 
                     break;
+
+                case 3:
+                    System.out.println("dati dello studente 1: " + studente1);
+                    System.out.println("dati dello studente 2: " + studente2);
+
+                    break;
+
+                case 4:
+                    System.out.println("programma terminato");
+                    break;
             }
         }
     }
