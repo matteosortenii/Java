@@ -5,6 +5,15 @@ public class Studente {
     double altezza;
     double peso;
 
+public Studente() {
+
+        this.nome = " ";
+        this.cognome = " ";
+        this.eta = 0;
+        this.altezza = 0.0;
+        this.peso = 0.0;
+}
+
     public Studente(String nome, String cognome, int eta, double altezza, double peso) {
         this.nome = nome;
         this.cognome = cognome;
