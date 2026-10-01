@@ -1,21 +1,55 @@
+import java.util.Scanner;
+
 public class Main {
     public static void main(String[] args) {
 
-        Dado d1 = new Dado();
-        System.out.println(d1);
+        Scanner input = new Scanner(System.in);
 
-        Dado d2 = new Dado(10);
-        System.out.println(d2);
+        Dado dado = new Dado();
 
-        Dado d3 = new Dado(d2);
-        System.out.println(d3);
+        int scelta;
 
-        System.out.println("Lancio d1: " + d1.lancia());
-        System.out.println("Lancio d2: " + d2.lancia());
-        System.out.println("Lancio d3: " + d3.lancia());
+        do {
+            System.out.println("1. Visualizza dado");
+            System.out.println("2. Lancia dado");
+            System.out.println("3. Crea dado con N facce");
+            System.out.println("4. Crea copia del dado");
+            System.out.println("0. Esci");
 
-        System.out.println("d1: " + d1.toString());
-        System.out.println("d2: " + d2.toString());
-        System.out.println("d3: " + d3.toString());
+            System.out.print("Scelta: ");
+            scelta = input.nextInt();
+
+            switch (scelta) {
+                case 1:
+                    System.out.println(dado);
+                    break;
+
+                case 2:
+                    System.out.println("Risultato del lancio: " + dado.lancia());
+                    break;
+
+                case 3:
+                    System.out.print("Inserisci il numero di facce: ");
+                    int n = input.nextInt();
+                    dado = new Dado(n);
+                    System.out.println("Dado creato: " + dado);
+                    break;
+
+                case 4:
+                    dado = new Dado(dado);
+                    System.out.println("Copia creata: " + dado);
+                    break;
+
+                case 0:
+                    System.out.println("Arrivederci!");
+                    break;
+
+                default:
+                    System.out.println("Scelta non valida.");
+            }
+
+        } while (scelta != 0);
+
+        input.close();
     }
 }
