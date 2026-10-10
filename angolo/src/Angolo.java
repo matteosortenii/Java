@@ -46,21 +46,21 @@ public class Angolo {
 
         g = g % 360;
 
-        return new Angolo(gradi, primi, secondi);
+        return new Angolo(g, p, s);
     }
 
     public Angolo sottraiAngolo (Angolo a){
         int g = this.gradi - a.gradi;
-        int m = this.primi - a.primi;
+        int p = this.primi - a.primi;
         int s = this.secondi - a.secondi;
 
         if (s < 0) {
             s = s + 60;
-            m = m - 1;
+            p = p - 1;
         }
 
-        if (m < 0) {
-            m = m + 60;
+        if (p < 0) {
+            p = p + 60;
             g = g - 1;
         }
 
@@ -68,6 +68,6 @@ public class Angolo {
             g = g + 360;
         }
 
-        return new Angolo(g, m, s);
+        return new Angolo(g, p, s);
     }
 }
