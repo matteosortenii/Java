@@ -21,6 +21,18 @@ public class Angolo {
         this.secondi = secondi;
     }
 
+    public int getGradi() {
+        return gradi;
+    }
+
+    public int getPrimi() {
+        return primi;
+    }
+
+    public int getSecondi() {
+        return secondi;
+    }
+
     public Angolo sommaAngolo (Angolo a){
         int g = this.gradi + a.gradi;
         int p = this.primi + a.primi;
