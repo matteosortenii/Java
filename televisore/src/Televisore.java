@@ -49,6 +49,10 @@ public class Televisore {
         }
     }
 
+    public int selezionaCanale(){
+
+    }
+
     @Override
     public String toString(){
         return "il televisore è acceso, sul canale " + canale + " con il volume a " + volume;
