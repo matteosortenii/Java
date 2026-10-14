@@ -16,6 +16,7 @@ public class Main {
             System.out.println("5. canale precedente");
             System.out.println("6. selezionare canale");
             System.out.println("7. visualizzare le info del televisore");
+            System.out.println("0. uscire dal programma");
 
             scelta = s.nextInt();
 
@@ -29,8 +30,7 @@ public class Main {
                     break;
 
                 case 3:
-                    int volume;
-                    volume = s.nextInt();
+                    int volume = s.nextInt();
                     t.setVolume(volume);
                     break;
 
@@ -43,6 +43,20 @@ public class Main {
                     break;
 
                 case 6:
+                    int canale = s.nextInt();
+                    t.selezionaCanale(canale);
+                    break;
+
+                case 7:
+                    System.out.println(t.toString());
+                    break;
+
+                case 0:
+                    System.out.println("Uscita dal programma.");
+                    break;
+
+                default:
+                    System.out.println("Scelta non valida.");
             }
             
         } while (scelta != 0);
