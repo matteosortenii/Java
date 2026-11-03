@@ -1,12 +1,12 @@
 public class Risposta {
     private String risposta;
-    private boolean rispostaCorretta;
+    private boolean Corretta;
 
     public String getRisposta() {
         return risposta;
     }
 
-    public boolean isRispostaCorretta(){
-        return rispostaCorretta;
+    public boolean isCorretta(){
+        return Corretta;
     }
 }
