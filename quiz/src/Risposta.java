@@ -1,12 +1,17 @@
 public class Risposta {
-    private String risposta;
-    private boolean Corretta;
+    private String testo;
+    private boolean corretta;
 
-    public String getRisposta() {
-        return risposta;
+    public Risposta(String testo, boolean corretta) {
+        this.testo = testo;
+        this.corretta = corretta;
+    }
+
+    public String getTesto() {
+        return testo;
     }
 
     public boolean isCorretta(){
-        return Corretta;
+        return corretta;
     }
 }
