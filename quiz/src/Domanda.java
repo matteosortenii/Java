@@ -23,5 +23,16 @@ public class Domanda {
     }
 
     public boolean rispondi(int valore){
+        this.rispostaScelta = valore;
+        return this.risposte[ valore-1].isCorretta();
+    }
+
+    @Override
+    public String toString(){
+        String s = this.domanda + "\n";
+        for (int i = 0; i < this.risposte.length; i++) {
+            s +=(i + 1) + ") " + this.risposte[i].getDomanda() + "\n";
+        }
+        return s;
     }
 }
