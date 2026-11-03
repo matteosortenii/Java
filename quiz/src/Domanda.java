@@ -31,9 +31,9 @@ public class Domanda {
         return valore;
     }
 
-    public void setValore (){
+    public void setValore (int valore){
         if (valore >= 0){
-            this.valore = valore
+            this.valore = valore;
         }
     }
 
