@@ -1,18 +1,18 @@
 public class Domanda {
-    private String domanda;
+    private String testo;
     private Risposta[] risposte;
     private int valore;
     private int rispostaScelta;
 
-    public Domanda(String domanda, Risposta[] risposte) {
-        this.domanda = domanda;
+    public Domanda(String testo, Risposta[] risposte) {
+        this.testo = testo;
         this.risposte = risposte;
         this.valore = 1;
         this.rispostaScelta = 0;
     }
 
     public Domanda(Domanda d) {
-        this.domanda = d.domanda;
+        this.testo = d.testo;
         this.valore = d.valore;
         this.rispostaScelta = 0;
         this.risposte = d.risposte;
@@ -25,9 +25,9 @@ public class Domanda {
 
     @Override
     public String toString(){
-        String s = this.domanda + "\n";
+        String s = this.testo + "\n";
         for (int i = 0; i < this.risposte.length; i++) {
-            s +=(i + 1) + ") " + this.risposte[i].getDomanda() + "\n";
+            s +=(i + 1) + ") " + this.risposte[i].getTesto() + "\n";
         }
         return s;
     }
