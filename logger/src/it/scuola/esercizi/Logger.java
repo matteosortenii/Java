@@ -42,5 +42,8 @@ class Azione {
 }
 
 public class Logger {
+    private int maxAzioni;
+    Azione[] azioni;
+    int nAzioni;
 
 }
